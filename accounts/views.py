@@ -8,9 +8,7 @@ from accounts.permissions import IsMyAccountOrReadOnly
 
 
 class AccountViewSet(viewsets.ModelViewSet):
-    """
-    dffg
-    """
+
     queryset = get_user_model().objects.all()
     serializer_class = AccountSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly, IsMyAccountOrReadOnly,)

@@ -20,5 +20,6 @@ class Post(models.Model):
         blank=True,
         help_text=_('A comma-separated list of tags'))
 
+
     class Meta:
         ordering = ('-published_date', )

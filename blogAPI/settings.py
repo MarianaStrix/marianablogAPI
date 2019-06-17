@@ -46,26 +46,33 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 
     'accounts',
+    'auth_recaptcha',
     'posts',
 
-    'rest_framework',
-    'rest_framework.authtoken',
-    'rest_auth',
     'allauth',
     'allauth.account',
+    'recaptcha',
+    'rest_auth',
     'rest_auth.registration',
+    'rest_framework',
+    'rest_framework.authtoken',
     'rest_framework_swagger',
 
     'easy_thumbnails',
     'taggit',
     'taggit_serializer',
+
+    'corsheaders',
 ]
 
 SITE_ID = 1
 
+
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -195,3 +202,20 @@ REST_FRAMEWORK = {
 
 # Django-taggit
 TAGGIT_CASE_INSENSITIVE = True
+
+
+# E-mail
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = env('EMAIL_HOST')
+EMAIL_PORT = env('EMAIL_PORT')
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = False
+DEFAULT_FROM_EMAIL = "Mariana's Blog <support@marianastrix.com>"
+
+# django-cors-headers
+CORS_ORIGIN_ALLOW_ALL = True
+
+# reCaptcha
+GR_CAPTCHA_SECRET_KEY = '6Lcrlo0UAAAAALum40B22zbe_Jms4JerOKoqKioF'

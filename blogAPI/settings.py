@@ -29,10 +29,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool('DEBUG')
 
-ALLOWED_HOSTS = ['127.0.0.1']
-
+ALLOWED_HOSTS = tuple(env.list('ALLOWED_HOSTS', default=[]))
 
 # Application definition
 
@@ -46,7 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 
     'accounts',
-    'auth_recaptcha',
     'posts',
 
     'allauth',
@@ -188,7 +186,6 @@ AVATAR_SIZE = 150
 # ACCOUNT_EMAIL_VERIFICATION = 'optional'
 
 
-
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.SessionAuthentication',
@@ -218,4 +215,4 @@ DEFAULT_FROM_EMAIL = "Mariana's Blog <support@marianastrix.com>"
 CORS_ORIGIN_ALLOW_ALL = True
 
 # reCaptcha
-GR_CAPTCHA_SECRET_KEY = '6Lcrlo0UAAAAALum40B22zbe_Jms4JerOKoqKioF'
+GR_CAPTCHA_SECRET_KEY = env('CAPTCHA_SECRET_KEY')

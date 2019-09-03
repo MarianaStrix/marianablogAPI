@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 import sys
+
 from blogAPI.settings.env import env
 
 if __name__ == '__main__':

@@ -1,5 +1,4 @@
 from recaptcha.fields import ReCaptchaField
-
 from rest_auth.registration.serializers import RegisterSerializer
 
 

@@ -1,5 +1,6 @@
 from rest_auth.registration.views import RegisterView
-from auth_recaptcha.serializers import ReCaptchaRegisterSerializer
+
+from .serializers import ReCaptchaRegisterSerializer
 
 
 class ReCaptchaRegisterView(RegisterView):

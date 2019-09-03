@@ -1,7 +1,8 @@
 import os
-from django.utils.translation import gettext_lazy as _
-from .env import env
 
+from django.utils.translation import gettext_lazy as _
+
+from .env import env
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -133,9 +134,7 @@ CACHES = {
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static/")
-print(BASE_DIR)
-print(STATIC_ROOT)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 
 MEDIA_URL = '/media/'
@@ -160,10 +159,6 @@ EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = False
 DEFAULT_FROM_EMAIL = "Mariana's Blog <support@marianastrix.com>"
-
-
-# django-cors-headers
-CORS_ORIGIN_ALLOW_ALL = True
 
 
 # reCaptcha

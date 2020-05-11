@@ -4,8 +4,8 @@ import sys
 
 from blogAPI.settings.env import env
 
-if __name__ == '__main__':
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'blogAPI.settings.' + env('ENVIRONMENT'))
+if __name__ == "__main__":
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "blogAPI.settings." + env("ENVIRONMENT"))
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

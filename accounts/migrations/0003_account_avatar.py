@@ -7,13 +7,13 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('accounts', '0002_remove_account_new_email'),
+        ("accounts", "0002_remove_account_new_email"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='account',
-            name='avatar',
-            field=easy_thumbnails.fields.ThumbnailerImageField(default='default.png', upload_to='profile_pics/%Y/%m/%d'),
+            model_name="account",
+            name="avatar",
+            field=easy_thumbnails.fields.ThumbnailerImageField(default="default.png", upload_to="profile_pics/%Y/%m/%d"),
         ),
     ]

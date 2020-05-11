@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class AuthRecaptchaConfig(AppConfig):
-    name = 'auth_recaptcha'
+    name = "auth_recaptcha"

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "easy_thumbnails",
     "taggit",
     "taggit_serializer",
+    "corsheaders",
 ]
 
 SITE_ID = 1

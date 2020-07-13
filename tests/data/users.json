@@ -1,0 +1,16 @@
+{
+  "user_valid": {
+    "email": "first_user@example.ru",
+    "username": "first_user_1",
+    "password": "my_password"
+  },
+  "user_with_avatar": {
+    "username": "first_user_1_with_avatar",
+    "password": "my_password",
+    "avatar": "example.jpg"
+  },
+    "second_user_valid": {
+    "username": "second_use_1",
+    "password": "my_password"
+  }
+}

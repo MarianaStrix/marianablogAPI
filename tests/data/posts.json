@@ -1,0 +1,17 @@
+{
+  "post_valid": {
+    "title": "Example",
+    "text": "Text",
+    "tags": ["Tag"]
+  },
+    "post_with_long_title": {
+    "title": "Title Example Title Example Title Example Title Example Title Example Title Example Title Example Title Example Title Example Title Example Title Example Title Example Title Example Title Example Title Example",
+    "text": "Text",
+    "tags": ["Tag"]
+  },
+  "second_post_valid": {
+    "title": "Second Example",
+    "text": "Second Text",
+    "tags": ["Second_Tag"]
+  }
+}

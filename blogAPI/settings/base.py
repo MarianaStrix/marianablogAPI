@@ -162,3 +162,33 @@ DEFAULT_FROM_EMAIL = "Mariana's Blog <support@marianastrix.com>"
 
 # reCaptcha
 GR_CAPTCHA_SECRET_KEY = env("CAPTCHA_SECRET_KEY")
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'file': {
+            'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
+        }
+    },
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'formatter': 'file',
+            'filename': os.getenv('LOG_FILE', '/var/log/blog/log.log')
+        }
+    },
+    'loggers': {
+        'posts': {
+            'handlers': ['file'],
+            'level': os.getenv('LOG_LEVEL', 'INFO'),
+        },
+        'django': {
+            'handlers': ['file'],
+            'level': os.getenv('LOG_LEVEL', 'INFO'),
+            'propagate': True,
+        },
+    }
+}

@@ -192,3 +192,5 @@ LOGGING = {
         },
     }
 }
+
+CORS_ORIGIN_WHITELIST = tuple(env.list("CORS_ORIGIN_WHITELIST", default=[]))
